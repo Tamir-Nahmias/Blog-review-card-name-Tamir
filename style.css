@@ -1,22 +1,25 @@
-body{
+body {
     background-color: hsl(47, 88%, 63%);
     font-family: "Figtree", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;  
     font-size: 14px;
+    margin: 0;
+    padding: 0;
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 
 .card {
     background-color: hsl(0, 0%, 100%);
-    min-width: 325px;
-    width: 325px;
+    width: 100%;
+    max-width: 325px;
     height: auto;
     margin-top: 75px;
     border-radius: 5%;
@@ -25,17 +28,45 @@ main {
     box-shadow: 8px 8px;
 }
 
-.mainpic{
+.mainpic {
     display: flex;
     justify-content: center;
 }
 
-#picture{
+#picture {
     border-radius: 4%;
-    width: 325px;
+    width: 100%;
     height: auto;
 }
-#learning{
+
+/* Add media query for smaller screens */
+@media screen and (max-width: 375px) {
+    .card {
+        margin-top: 2rem;
+        padding: 15px;
+        box-shadow: 6px 6px;
+    }
+
+    #learning {
+        padding: 6px;
+        width: 50px;
+        font-size: 12px;
+    }
+
+    #biggest {
+        font-size: large !important;
+    }
+
+    #gryeish {
+        font-size: 14px !important;
+    }
+
+    .greghooper {
+        font-size: 13px;
+    }
+}
+
+#learning {
     background-color: hsl(47, 88%, 63%);
     width: 60px;
     padding: 8px;
@@ -43,31 +74,38 @@ main {
     text-align: center;
     font-weight: 800;
     border-radius: 7%;
-    /* font-size: 14px !important; */
 }
 
 #biggest {
     font-weight: 800 !important;
     font-size: x-large !important;
 }
-.greghooper{
+
+.greghooper {
     display: flex;
     align-items: center;
     font-weight: 800;
 }
-span{
+
+span {
     padding-right: 10px;
 }
-#gryeish{
+
+#gryeish {
     color: hsl(0, 0%, 42%);
     font-size: 16px !important;
 }
-#published{
-    /* font-size: 14px !important; */
-    font-weight: 500 ;
+
+#published {
+    font-weight: 500;
 }
 
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 10px;
+}
 
-
-.attribution { font-size: 11px; text-align: center; margin-top: 10px; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
